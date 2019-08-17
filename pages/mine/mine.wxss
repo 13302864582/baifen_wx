@@ -1,0 +1,7 @@
+/* pages/mine/mine.wxss */
+.weui-cells_after-title {
+    margin-top: 10px;
+}
+.userinfo-avatar {
+  margin-right: 10px;
+}

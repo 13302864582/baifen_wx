@@ -1,0 +1,57 @@
+<!--pages/recharge/recharge.wxml-->
+<view class="page__bd" wx:if="{{login_state == 0}}">
+  <view class="pink strong fl-right"></view>
+  <view class="page__desc">
+    <view class="fl-left color-left">可用作业劵：
+      <text class="pink strong">{{coupon_count?coupon_count:0}}</text> 张</view>
+    <view class="clear"></view>
+  </view>
+
+  <block wx:for="{{packagelist}}">
+    <view class='pay-card'>
+      <image src='../../images/bg_paycard.png'></image>
+
+      <view class='content'>
+        <view class='left'>
+          <view class="fl-left">
+            <text class='money-unit'>¥</text>
+            <text class="money pink">{{item.money}}</text>
+          </view>
+
+          <view class='text-overhiddle title'>{{item.content}}</view>
+          <view class='text-overhiddle detail' data-details="{{item.detail_content}}" bindtap="details">
+            <text>套餐详情: </text>{{item.detail_content}}
+          </view>
+        </view>
+
+        <view class='buy-right' data-money="{{item.money}}" data-title="{{item.content}}" data-packageid="{{item.packageid}}" bindtap="payment">
+          立刻购买
+        </view>
+      </view>
+    </view>
+  </block>
+
+  <!--<button>待支付订单</button>-->
+</view>
+
+<view class="page" wx:else>
+  <view class="weui-msg">
+    <view class="weui-msg__icon-area">
+
+    </view>
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__title">未登录</view>
+    </view>
+    <view class="weui-msg__opr-area">
+      <view class="page__bd">
+        <view class="btn-area">
+          <button type="default" bindtap="tologin">马上登录</button>
+        </view>
+      </view>
+    </view>
+
+    <view class="weui-msg__text-area">
+      <view class="weui-msg__desc">登录后才可以查看套餐，请点击登录</view>
+    </view>
+  </view>
+</view>

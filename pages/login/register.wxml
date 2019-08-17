@@ -1,0 +1,41 @@
+<!--pages/login/register.wxml-->
+<loading hidden="{{hidden}}">
+  {{loadingcontent}}
+</loading>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="root weui-bg-color">
+    <view class='logo'>
+      <image src='../../images/logo.png'></image>
+    </view>
+    <view class='content'>
+      <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <view>
+          <image src='../../images/mobile.png'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <input class="weui-input hint-color" bindinput="userPhoneInput" value='{{userPhone}}' disabled='true'                        name="userPhone" type="number" maxlength="11" placeholder="点击获取" placeholder-class='hint-color'/>
+        </view>
+        <button  open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" plain="true" class="weui-phone-btn weui-border-color weuir-color">获取号码</button>
+      </view>
+
+      <view class="weui-cell">
+        <view>
+          <image src='../../images/classes.png'></image>
+        </view>
+        <view class="weui-cell__bd">
+          <picker bindchange="bindGradeChange" name="gradeid" value="{{grades[index].gradeid}}" 
+            range="{{grades}}" range-key="gradename">
+            <view class="weui-select weui-select_in-select-after hint-color">{{grades[index].gradename}}</view>
+          </picker>
+        </view>
+      </view>
+    </view>
+    <view class="page__bd">
+      <view class="btn-area">
+        <button class="weui-bg-color" type="default" formType="submit">登陆</button>
+      </view>
+    </view>
+    </view>
+  </view>
+</form>

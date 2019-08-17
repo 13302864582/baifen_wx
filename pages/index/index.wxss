@@ -1,0 +1,103 @@
+/**index.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 300rpx 0;
+  box-sizing: border-box;
+} 
+.header{
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.header .bg-image{
+  width: 100%;
+  height: 100%;
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  float: left;
+}
+.userinfo-avatar {
+  width:46px;
+  height:46px;
+  background:#eee;
+  border-radius:50%;
+}
+
+.onshare {
+  display: flex;
+  flex-direction: column;
+  float: right;
+}
+.onshare-avatar {
+  margin: 40rpx 40rpx 0 40rpx;
+  width: 46px;
+  height: 46px;
+  
+}
+.userinfo-avatar {
+  margin: 40rpx 40rpx 0 40rpx;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  font-size: 12px;
+  margin: 20rpx;
+}
+
+.usermotto {
+  margin-top: 20px;
+}
+.chat {
+  float: right;
+}
+.chat-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  margin: 40rpx;
+  padding: 20rpx;
+  background: #f68484;
+  border-radius: 50%;
+}
+.photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo-avatar {
+  width: 136px;
+  height: 136px;
+}
+
+.photo-nickname {
+  color: #fff;
+  font-size: 15px;
+  margin-top: 10px;
+}
+.page-body-wording {
+  text-align:center;
+  padding:0px;
+}
+
+.front{
+  padding-top: 40px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%；
+}
+
+.page__desc .invite{
+  margin-left: 8px;
+}
+
+.point-yellow{
+  color: #fefc7c;
+}

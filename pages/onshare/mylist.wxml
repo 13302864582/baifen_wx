@@ -1,0 +1,42 @@
+<!--pages/onshare/mylist.wxml-->
+<view class="page">
+    <view class="strong tc fs16 page__hd">
+        <text class="pr-10">已邀请 <text class="pink">{{uinfo.totalap ? uinfo.totalap : 0}}</text> 人</text>
+        已获得 <text class="pink">{{uinfo.exchangecp? uinfo.exchangecp:0}}</text> 张劵
+    </view>
+    <view class="weui-cells__title">
+       <view>温馨提示：</view>
+       <view>1.请邀请熟悉家长，并微信沟通促其使用</view>
+       <view>2.对方拍作业检查，您即得到作业劵 <text class="pink strong">{{uinfo.S?uinfo.S:0}}</text> 张</view>
+    </view>
+    <view class="weui-panel weui-panel_access fs14">
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_text tc" style = "line-height: 32px;">
+                <view class="weui-flex strong">
+                    <view class="weui-flex__item"><view class="placeholder">好友</view></view>
+                    <view class="weui-flex__item"><view class="placeholder">加入时间</view></view>
+                    <view class="weui-flex__item"><view class="placeholder">是否使用</view></view>
+                    <view class="weui-flex__item"><view class="placeholder">得劵</view></view>
+                </view>
+                <block  wx:for="{{ulist}}" wx:key="unique">
+                    <view class="weui-flex">
+                        <view class="weui-flex__item">
+                            
+                                <image class="userinfo-avatar" src="{{item.avatar}}"></image>
+                                <view class="usernickname tc">{{item.name}}</view>
+                            
+                        </view>
+                        <view class="weui-flex__item"><view class="placeholder">{{item.createtime}}</view></view>
+                        <view class="weui-flex__item">
+                          <view class="placeholder" wx:if="{{item.published == 0}}">未用</view>
+                          <view class="placeholder" wx:else>已用</view>
+                        </view>
+                        <view class="weui-flex__item"><view class="placeholder">{{item.integral}}</view></view>
+                    </view>
+                </block>
+            </view>
+        </view>
+    </view>
+
+    
+</view>

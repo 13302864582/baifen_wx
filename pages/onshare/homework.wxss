@@ -1,0 +1,87 @@
+/* pages/homework/detail.wxss */
+swiper{
+  height: 92%;
+  width: 100%
+}
+.img-box {
+  height: 100%;
+  width: 100%;
+   position: relative;
+}
+image {
+width:100%;
+height:100%;
+background: #eee;
+display:inline-block;
+overflow:hidden;
+}
+
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+}
+.weui-navbar__item:hover{
+  background: #eee;
+}
+/*正确*/
+.right-ans {
+  position: absolute;
+  z-index:600;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+}
+/*错误*/
+.wrong-ans {
+  position: absolute;
+  z-index:600;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+}
+/*纠正*/
+.correct-ans {
+  position: absolute;
+  z-index:600;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+}
+/*投诉*/
+.appeal-ans {
+  position: absolute;
+  z-index:600;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+}
+.weui-btn{
+  float: left;
+  margin-top:0px;
+  width: 100%;
+}
+button[type="warn"][plain] {
+  color:#e64340;
+  border:none;
+  border-radius:0px;
+  background-color:transparent;
+}
+button[type="primary"][plain] {
+  color:#1aad19;
+  border:none;
+  background-color:transparent;
+}
+button {
+  font-size:14px;
+  line-height:3.6;
+}
+
+.button-sp-area{
+margin-bottom: 340px;
+}

@@ -1,0 +1,55 @@
+<!--pages/index/homework.wxml-->
+<loading hidden="{{hidden}}" mask="true">
+    {{loadingcontent}}
+</loading>
+  <view class="page-body">
+    <view class="page-body-wrapper">
+      <form bindsubmit="homeworkpublish">
+       <view class="images-wrapper">
+          <text class="images-text">点击拍照</text>
+          <view><text class="images-subtitle">清晰拍照、只拍单科作业、空题不能超过2道，一张照片一页作业</text></view>
+          <view class="images-list">
+            <block wx:for="{{imageList}}" wx:for-item="image">
+              <view class="img-upload">
+                <image src="{{image}}" class="images-image" data-src="{{image}}" bindtap="previewImage"></image>
+                <view class="img-del" data-id="{{index}}" data-src="{{image}}" bindtap="delImage">X</view>
+              </view>
+            </block>
+            <view class="images-image image-plus" bindtap="chooseImage" hidden="{{imagelength==1||imagelength==2 ? true : false}}">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+              <!-- <view class="leaf fs11">第1页</view> -->
+            </view>
+            <view class="images-image image-plus" bindtap="chooseImage" hidden="{{imagelength==2 ? true : false}}">
+              <view class="image-plus-horizontal"></view>
+              <view class="image-plus-vertical"></view>
+              <!-- <view class="leaf fs11">第2页</view> -->
+            </view>
+          </view>
+        </view>
+        
+        <view class="subject">
+            <text class="images-text">选择学科</text>
+            <view><text class="images-subtitle">选错科目会被举报或者删除</text></view>
+            <radio-group bindchange="radioChange" name="subjectid">
+                <label class="weui-cell weui-check__label {{item.checked? 'weui-check__label_hover':''}}" wx:for="{{subjects}}" wx:key="{{item.subjectid}}">
+                    <radio class="weui-check" value="{{item.subjectid}}" checked="{{item.checked}}"/>
+                    <view class="weui-cell__bd">{{item.subject_name}}</view>
+                </label>
+                <view class="clear"></view>                
+            </radio-group>
+        </view>
+
+         
+        <view class="warning" hidden="{{supervip == 1 ? true : false}}">
+          <text>你有<text class="red">{{coupon_count}}</text>张作业劵，</text>
+          <text hidden="{{coupon_count > 0 ? false : true}}" >本次发布作业，{{imageList[0]? '' : '每张图片'}}需消耗<text class="red strong"> {{imageList[0]? imagelength : 1}} </text>张作业劵</text>
+          <text hidden="{{coupon_count <= 0? false : true}}" bindtap="invite" ><text class="blue underline" >邀请1位好友使用后得劵 <text class="strong">{{S}}</text> 张</text></text>
+        </view>
+        <view class="btn-area">
+            <button formType="submit" disabled="{{imageList[0]&&(coupon_count >= 1||supervip ==1)&&subjectidExist>0&&coupon_count>=imagelength&&click==0? false : true}}">发布作业</button>
+        </view>
+      </form>
+    </view>
+  </view>
+

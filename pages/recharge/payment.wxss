@@ -1,0 +1,11 @@
+/* pages/recharge/payment.wxss */
+page{
+    background: #f9f9f9;
+}
+.page__hd {
+    padding: 20px;
+}
+.weui-form-preview {
+    margin-top: 20px;
+    background: #fff
+}

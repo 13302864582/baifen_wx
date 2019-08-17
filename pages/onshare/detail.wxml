@@ -1,0 +1,52 @@
+<!--pages/homework/ans.wxml-->
+<image src="{{checkpointdata[1]}}" mode="aspectFit"></image>
+
+<block wx:for="{{coordinateList}}">
+    <view class="weui-cell__hd" wx:if="{{item.explaintype == 1}}" data-text="{{item.text}}" bindtap="gotoText" style="position:absolute;z-index:600;height:24px;width:55px;left:{{item.coordinate_x}}px;top:{{item.coordinate_y}}px">
+        
+        <image wx:if="{{item.subtype == 0 }}" src="../../images/text-y.png" class="sound"/>
+        
+        <image wx:elif="{{item.subtype != 0 }}" src="../../images/text.png" class="sound"/>
+        <view wx:if="{{item.subtype > 0}}" class="ans-badge" style="position: absolute;top:-14px;right:0;">
+            <text class="weui-badge strong">{{item.exseqid}}</text>
+            <text wx:if="{{item.subtype == 1}}">思路</text>
+            <text wx:elif="{{item.subtype == 2}}">过程</text>
+            <text wx:elif="{{item.subtype == 3}}">总结</text>
+            <text wx:elif="{{item.subtype == 4}}">回复</text>
+            <text wx:else>讲解</text>
+            <!--1思路,2过程,3总结,4回复,5讲解-->
+        </view>
+        <view wx:else class="ans-badge bc_yellow" style="position: absolute;top:-14px;right:0;">
+            <text class="weui-badge strong">{{item.exseqid}}</text>
+            <text>追问</text>
+            <!--1思路,2过程,3总结,4回复,5讲解-->
+        </view>
+    </view>
+    
+    <view class="weui-cell__hd" data-id="{{index}}" wx:elif="{{item.explaintype == 2}}" data-sndpath="{{item.mp3domain}}" bindtap="gotoPlay" style="position:absolute;z-index:600;height:24px;width:55px;left:{{item.coordinate_x}}px;top:{{item.coordinate_y}}px">
+        <image wx:if="{{item.subtype == 0 }}" src="../../images/sound-y.png" class="sound"/>
+        
+        <image wx:elif="{{item.subtype != 0 }}" src="{{soundset[index]?soundset[index]:sound}}" class="sound"/>
+        
+        <view wx:if="{{item.subtype > 0}}" class="ans-badge {{soundset[index]?'bc_yellow':''}}" style="position: absolute;top:-14px;right:0;">
+            <text class="weui-badge strong">{{item.exseqid}}</text>
+            <text wx:if="{{item.subtype == 1}}">思路</text>
+            <text wx:elif="{{item.subtype == 2}}">过程</text>
+            <text wx:elif="{{item.subtype == 3}}">总结</text>
+            <text wx:elif="{{item.subtype == 4}}">回复</text>
+            <text wx:else>讲解</text>
+            <!--1思路,2过程,3总结,4回复,5讲解-->
+        </view>
+        <view wx:else class="ans-badge bc_yellow" style="position: absolute;top:-14px;right:0;">
+            <text class="weui-badge strong">{{item.exseqid}}</text>
+            <text>追问</text>
+            <!--1思路,2过程,3总结,4回复,5讲解-->
+        </view>
+    </view>
+</block>
+
+
+
+<view class="button-sp-area weui-navbar">
+      <button class="weui-btn" type="warn" bindtap="apply" plain="true">{{applytext}} </button>
+</view>

@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="header">
+  <image class='bg-image' src="../../images/home-top.png" mode="scaleToFill"></image>
+  <view class="front">
+    <view bindtap="bindMine" class="userinfo">
+      <image class="userinfo-avatar" src="{{avatar_100}}" background-size="cover"></image>
+      <text class="userinfo-nickname tc">{{userid}}</text>
+    </view>
+    <view bindtap="onShare" class="onshare">
+      <image class="onshare-avatar" src="../../images/Share.png" background-size="cover"></image>
+      <text class="userinfo-nickname tc">邀请得劵</text>
+    </view>
+    <view class="page-body">
+      <view bindtap="bindViewTap" class="photo">
+        <image class="photo-avatar" src="{{img}}" background-size="cover"></image>
+        <text class="photo-nickname pink">家庭作业 点此检查</text>
+      </view>
+
+    </view>
+    <view class="page-body-wording">
+      <view class="page__desc">
+        <view class="tc" hidden="{{tokenid ? false : true}}">
+          作业劵：
+          <text class="pink strong point-yellow">{{coupon_count?coupon_count:0}}</text> 张
+          <text class="invite blue underline point-yellow" bindtap="invite">邀请1位好友使用后得劵 <text class="strong point-yellow">{{S}}</text> 张</text>
+        </view>
+        <view class="tc strong" hidden="{{tokenid ? true : false}}">注册免费检查作业</view>
+        <!--<view class="fl-right">可用难题劵：<text class="pink strong">0</text> 张</view>-->
+        <view class="clear"></view>
+      </view>
+    </view>
+  </view>
+</view>

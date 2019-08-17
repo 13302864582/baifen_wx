@@ -1,0 +1,71 @@
+<!--pages/tutor/tutor.wxml-->
+<view class="page__hd">
+    <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__bd">
+            <view class="weui-media-box weui-media-box_appmsg" >
+                <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                    <image class="weui-media-box__thumb" src="../../images/logo.png" />
+                </view>
+                <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                    <view class="weui-media-box__title">{{orgname}}介绍</view>
+                    <view class="weui-media-box__desc"><text>{{orginfo}}</text></view>
+                    
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<!--<view class="coupon-phone" bindtap="callPhone" data-phone="{{school.tel}}">
+    <view class="strong">免费领劵+错题面对面免费精讲热线：</view>
+    <view class="strong">{{school.address}}：<text class="pink">{{school.tel}}</text></view>
+</view>-->
+
+<view class="weui-panel weui-panel_access mt-10">
+    <view class="weui-panel__hd">
+    <view>{{school.orgname}}（免费劵/同步作业辅导预约）</view>
+    <view>地址:{{school.address}}</view>
+    </view>
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_appmsg">
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg" bindtap="callPhone" data-phone="{{school.tel}}">
+                <view class="phone"><image src="../../images/phone.png"/></view>
+                <view class="fs14 pink tc">校区电话</view>
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg">
+                <view class="contactbutton">
+                    <!-- <contact-button class="bc_pink" type="default-light" size="27" session-from="weapp"></contact-button> -->
+                    <button class="phone" open-type="contact" session-from="weapp">
+                      <image src="../../images/kufu.png"></image>
+                    </button> 
+                </view>
+                
+                <view class="fs14 pink tc">微信客服</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+<view class="weui-panel weui-panel_access fs14 mb-10">
+    <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+            <view><image src='../../images/kefu_tip.png'></image>每周作业错题分类归纳，周末到校区听老师解析</view>
+            <view><image src='../../images/kefu_tip.png'></image>家庭作业一次可批改两整页，每道错题都检查，对错一目了然，每道错题都讲解、详细步骤和语音思路</view>
+            <view><image src='../../images/kefu_tip.png'></image>用完劵不要担心，拨打电话或微信客服及预约上门，上门后可再获劵</view>
+            
+            <view class="pl-20 mt-10 gray" hidden="{{hour>20 ||hour <9 ? true : false}}">
+                <view>{{bespokephone[0]}} 已于{{bespoketime[0]}}预约</view>
+                <view>{{bespokephone[1]}} 已于{{bespoketime[1]}}预约</view>
+                <view>{{bespokephone[2]}} 已于{{bespoketime[2]}}预约</view>
+                <view>{{bespokephone[3]}} 已于{{bespoketime[3]}}预约</view>
+                <view>{{bespokephone[4]}} 已于{{bespoketime[4]}}预约</view>
+                <view>{{bespokephone[5]}} 已于{{bespoketime[5]}}预约</view>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+

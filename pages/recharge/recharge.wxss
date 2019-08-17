@@ -1,0 +1,106 @@
+/* pages/recharge/recharge.wxss */
+
+page {
+  background: #f9f9f9;
+}
+
+.page__hd {
+  padding: 20px;
+}
+
+.page__desc {
+  color: #000;
+  font-size: 14px;
+  margin: 10px;
+}
+
+.pay-card {
+  width: 710rpx;
+  height: 210rpx;
+  margin: 10rpx auto;
+  position: relative;
+}
+
+.pay-card image {
+  width: 100%;
+  height: 100%;
+}
+
+.pay-card .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.pay-card .content .left {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.weui-msg__icon-area {
+  height: 93px;
+}
+
+.color-left {
+  color: #666;
+}
+
+.buy-right {
+  color: #fff;
+  font-size: 24rpx;
+  margin:auto 10rpx;
+  writing-mode: vertical-rl;
+  padding: 30rpx;
+}
+
+.content .left{
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.content .left .title{
+  width: 100%;
+  font-size: 26rpx;
+  color: #4f4f4f;
+  text-align: center;
+  -webkit-line-clamp: 2;
+}
+
+.fl-left {
+  margin-left: 30rpx;
+  align-items: center;
+}
+
+.fl-left .money {
+  color: #e3353c;
+  font-size: 50rpx;
+  font-weight: bold;
+}
+
+.money-unit {
+  color: #e3353c;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+
+.text-overhiddle{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+.detail {
+  position: absolute;
+  font-size: 22rpx;
+  color: #afafaf;
+  bottom: 24rpx;
+  margin:auto 30rpx;
+  -webkit-line-clamp: 1;
+}

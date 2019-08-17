@@ -1,0 +1,40 @@
+<!--pages/detail/detail.wxml-->
+<view class="prompt gray">有的老师做完再统一提交，点击可刷新</view>
+<swiper indicator-dots="true" bindtap="loading">
+  <block wx:for="{{pageList}}" wx:for-item="pageListdata">
+    <swiper-item>
+    <image src="{{pageListdata.imgpath}}" class="slide-image" mode="aspectFit" data-id="{{index}}" style=""></image>
+    <block wx:for="{{pageListdata.checkpointlist}}" wx:for-item="checkpointlistdata">
+      <image bindtap="bindAnsUrl" data-checkpointdata="{{checkpointlistdata.id}},{{checkpointlistdata.imgpath}},{{checkpointlistdata.width}},{{checkpointlistdata.height}},{{state}}" src="../../images/wrong.png" wx:if="{{checkpointlistdata.isright == 0 && checkpointlistdata.showcomplainttype == 0}}" class="wrong-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+
+      <image bindtap="bindAnsUrl" data-checkpointdata="{{checkpointlistdata.id}},{{checkpointlistdata.imgpath}},{{checkpointlistdata.width}},{{checkpointlistdata.height}},{{state}}" src="../../images/appeal.png" wx:elif="{{checkpointlistdata.isright == 0 && checkpointlistdata.showcomplainttype == 1}}" class="appeal-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+
+      <image bindtap="bindAnsUrl" data-checkpointdata="{{checkpointlistdata.id}},{{checkpointlistdata.imgpath}},{{checkpointlistdata.width}},{{checkpointlistdata.height}},{{state}}" src="../../images/correct.png" wx:elif="{{checkpointlistdata.isright == 0 && checkpointlistdata.showcomplainttype == 2}}" class="correct-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+
+      <image src="../../images/right.png" wx:if="{{checkpointlistdata.isright == 1 && checkpointlistdata.showcomplainttype == 0}}" class="right-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+
+      <image src="../../images/appeal.png" wx:elif="{{checkpointlistdata.isright == 1 && checkpointlistdata.showcomplainttype == 1}}" class="appeal-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+
+      <image src="../../images/correct.png" wx:elif="{{checkpointlistdata.isright == 1 && checkpointlistdata.showcomplainttype == 2}}" class="correct-ans" style="left:{{checkpointlistdata.coordinate_x}}px; top:{{checkpointlistdata.coordinate_y}}px;"/>
+    </block>
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<!--<view class="weui-navbar button-sp-area">
+      <button id="{{index}}" class="weui-navbar__item" bindtap="tabClick" disabled="true">
+          <view class="weui-navbar__title red">拒绝</view>
+      </button>
+      <button id="{{index}}" class="weui-navbar__item" bindtap="tabClick">
+          <view class="weui-navbar__title green">采纳</view>
+      </button>
+      <button id="{{index}}" class="weui-navbar__item" bindtap="tabClick">
+          <view class="weui-navbar__title">批错举报</view>
+      </button>
+</view>-->
+<view class="button-sp-area weui-navbar">
+      <button class="weui-btn" type="warn" bindtap="refuseAnswer" data-taskid="{{taskid}}" disabled="{{state==0 || state==1 || state==4 || state==5 || state==6 || state==7|| state==8? true : false}}" plain="true">{{state==5 || state==6 ? '已' : ''}}拒绝</button>|
+      <button class="weui-btn" type="primary" bindtap="adoptAnswer" data-taskid="{{taskid}}" disabled="{{state==0 || state==1 || state==4|| state==8 ? true : false}}"  plain="true">{{state==4 ? '已' : ''}}采纳</button>
+      <!--<button class="weui-btn" type="default" disabled="{{state==0 || state==1 || state==4 ? true : false}}" plain="true">批错举报</button>-->
+</view>

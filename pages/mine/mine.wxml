@@ -1,0 +1,57 @@
+<!--pages/mine/mine.wxml-->
+<view class="weui-cells weui-cells_after-title">
+    <view class="weui-cell">
+        <view class="weui-cell__hd">
+            <image src="../../images/user-avatar.png" class="userinfo-avatar" />
+        </view>
+        <view class="weui-cell__bd">
+            <view>学号：{{userid}}</view>
+            <view class="subtitle">{{name}} {{grade}}</view>
+        </view>
+        <!--<view class="weui-cell__ft weui-cell__ft_in-access"></view>-->
+    </view>
+    <!--<view class="weui-cell weui-cell_access">
+        <view class="weui-cell__hd">
+            <image src="../../images/1.jpg" class="userinfo-avatar"/>
+        </view>
+        <view class="weui-cell__bd">
+            <view>李文言（我的班主任）</view>
+            <view class="subtitle">我是你班主任，欢迎加入火眼作业</view>
+        </view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>-->
+</view>
+
+<!--<view class="weui-cells weui-cells_after-title">
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="../../images/coupon.png" class="list-icon" />
+        </view>
+        <view class="weui-cell__bd">我的辅导劵</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">12</view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="../../images/activity.png" class="list-icon" />
+        </view>
+        <view class="weui-cell__bd">活动</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+    </navigator>
+    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="../../images/setting.png" class="list-icon" />
+        </view>
+        <view class="weui-cell__bd">设置</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">说明文字</view>
+    </navigator>
+    <navigator url="../onshare/homework" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="../../images/setting.png" class="list-icon" />
+        </view>
+        <view class="weui-cell__bd">亲友分享</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access">免费检查作业</view>
+    </navigator>
+</view>-->
+<view class="page__bd page-body-button">
+    <button class="weui-btn" bindtap="login_out" type="warn">退出登陆</button>
+</view>

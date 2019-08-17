@@ -1,0 +1,58 @@
+{
+  "pages": [
+    "pages/auth/auth",
+    "pages/index/index",
+    "pages/release/homework",
+    "pages/homework/homework",
+    "pages/homework/detail",
+    "pages/homework/ans",
+    "pages/mine/mine",
+    "pages/login/register",
+    "pages/onshare/homework",
+    "pages/onshare/detail",
+    "pages/onshare/mylist",
+    "pages/tutor/tutor",
+    "pages/recharge/recharge",
+    "pages/recharge/payment"
+  ],
+
+  "window": {
+    "navigationBarBackgroundColor": "#3CDB9E",
+    "navigationBarTitleText": "百分作业",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "white"
+  },
+  "tabBar": {
+    "color": "#242424",
+    "selectedColor": "#3CDB9E",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "拍作业",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home-hover.png"
+      },
+      {
+        "pagePath": "pages/homework/homework",
+        "text": "作业",
+        "iconPath": "images/homework.png",
+        "selectedIconPath": "images/homework-hover.png"
+      },
+      {
+        "pagePath": "pages/tutor/tutor",
+        "text": "客服",
+        "iconPath": "images/tutor.png",
+        "selectedIconPath": "images/tutor-hover.png"
+      },
+      {
+        "pagePath": "pages/recharge/recharge",
+        "text": "充值",
+        "iconPath": "images/recharge.png",
+        "selectedIconPath": "images/recharge-hover.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

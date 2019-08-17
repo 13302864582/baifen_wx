@@ -1,0 +1,106 @@
+/* pages/homework/homework.wxss */
+
+page {
+  background: #f9f9f9;
+}
+
+.page__hd {
+  padding: 20px;
+}
+
+.weui-media-box {
+  padding: 5px 10px;
+}
+
+.weui-media-box__hd_in-appmsg {
+  margin-right: 5px;
+  width: 100px;
+  height: 100px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.weui-media-box__hd_in-appmsg image {
+  border-radius: 4px;
+}
+
+.weui-cell {
+  padding: 0px;
+}
+
+.weui-cell__hd image {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.weui-cell_primary {
+  padding-bottom: 5px;
+}
+
+.weui-media-box__info__meta {
+  margin-top: 0px;
+  padding-bottom: 5px;
+  font-size: 10px;
+  color: #cecece;
+  line-height: 1em;
+  list-style: none;
+  overflow: hidden;
+}
+
+.weui-media-box__desc {
+  margin-left: 12px;
+  color: #000;
+  font-size: 14px;
+}
+
+/* 向右上角的箭头 */
+
+.dot-bottom {
+  font-size: 14px;
+  border-width: 30px 30px 30px 30px;
+  border-style: solid;
+  border-color: #f68484 #f68484 transparent transparent; /*灰 透明 透明 */
+  border-radius: 4px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.accuracy {
+  position: relative;
+  font-size: 24px;
+  z-index: 1;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  color: #eee;
+  background: rgba(0, 0, 0, 0);
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+}
+
+.right_wrong {
+  position: relative;
+  font-size: 12px;
+  z-index: 1;
+  left: 0;
+  top: -135px;
+  width: 100%;
+  color: #eee;
+  background: rgba(0, 0, 0, 0);
+  height: 80px;
+  line-height: 80px;
+  overflow: hidden;
+}
+
+.hwtipInfos {
+  margin-top: 10px;
+  background: #fff;
+  padding: 20px;
+}
+
+.orange {
+  color: #fb9f44;
+}

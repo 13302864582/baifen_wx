@@ -1,0 +1,92 @@
+/* pages/homework/ans.wxss */
+image {
+width:100%;
+height:92%;
+background: #eee;
+display:inline-block;
+overflow:hidden;
+}
+
+.weui-navbar {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  position: absolute;
+  z-index: 500;
+  bottom: 0;
+  width: 100%;
+  height: 8%;
+}
+.weui-navbar__item:hover{
+  background: #eee;
+}
+.sound{
+    width: 24px;
+    height: 24px;
+    background: transparent;
+}
+.ans-badge {
+  display: inline-block;
+  padding: 2px;
+  min-width: 8px;
+  border-radius: 10px;
+  background-color: #4dc95b;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 11px;
+  vertical-align: middle;
+}
+.weui-badge {
+  display: inline-block;
+  padding: 1px;
+  margin-right: 1px;
+  min-width: 8px;
+  border-radius: 50%;
+  background-color: #F43530;
+  color: #FFFFFF;
+  line-height: 1.2;
+  text-align: center;
+  font-size: 11px;
+  vertical-align: middle;
+}
+.bc_yellow {
+    background-color:#FFBE00;
+}
+
+
+.appeal-ans {
+  position: absolute;
+  z-index:600;
+  width: 30px;
+  height: 24px;
+  background-color: transparent;
+}
+.weui-btn{
+  float: left;
+  margin-top:0px;
+  width: 100%;
+}
+button[plain] {
+color:#353535;
+border:none;
+background-color:transparent;
+}
+button[type="primary"][plain] {
+  color:#1aad19;
+  border:none;
+  border-radius: 0px;
+  background-color:transparent;
+}
+button {
+  font-size:14px;
+  line-height:3.8;
+}
+.button-sp-area {
+  line-height: 40px;
+  color: #eee;
+}
+
+.exchange {
+    color: #fff;
+    width: 100%;
+}

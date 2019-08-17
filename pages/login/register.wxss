@@ -1,0 +1,78 @@
+/* pages/login/register.wxss */
+
+.weui-cell_vcode {
+  width: 60%;
+}
+
+.weui-vcode-btn {
+  position: absolute;
+  top: 49px;
+  right: 10px;
+  font-size: 13px;
+  line-height: 34px;
+  height: 34px;
+  z-index: 10000;
+}
+
+.weui-cell_input .weui-phone-btn {
+  width: 80px;
+  line-height: 25px;
+  height: 25px;
+  position: absolute;
+  right: 0px;
+  font-size: 12px;
+  z-index: 10000;
+  color: #3CDB9E;
+  border-color: #3CDB9E;
+}
+
+.btn-area {
+  margin-top: 50px;
+  padding: 0 15rpx;
+}
+
+.btn-area button {
+  left: 0;
+  width: 100%;
+  background-color: #3cdb9e;
+}
+
+.root {
+  position: relative;
+  padding-top: 140rpx;
+  background-color: #3cdb9e;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  padding: 200rpx 24rpx;
+  border-radius: 15rpx;
+  margin: 0 32rpx;
+  background-color: #fff;
+}
+.weui-cell{
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.weui-cell image {
+  width: 17px;
+  height: 22px;
+}
+
+.logo{
+  margin-top: -57px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  height:115px;
+}
+
+.logo image{
+  width: 115px;
+  height:100%;
+}
+
+.hint-color{
+  color: #AAA;
+}
